@@ -8,13 +8,13 @@ veces con papel y lápiz - de cada visitante. Por razones de seguridad,
 usualmente piden a cada visitante dejar una identificación. Si vivimos en la era
 digital, ¿por qué seguimos registrando visitantes como si fuera 1985? ¿Qué tal
 si sustituimos a la persona en recepción por una tablet? ¿Qué tal si en lugar de
-pedir una identificación, tomamos una foto? ...
+pedir una identificación, tomamos una foto?
 
 ## Introducción
 
 En este proyecto una empresa de coworking en tu ciudad ha
 decidido contratarte a ti y a otra compañera para reinventar su proceso de
-registro de visitantes. Con la entrada de [WeWork](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwilrK_T5KjcAhWCj7MKHexzAEgYABAAGgJxbg&ohost=www.google.cl&cid=CAASE-RoAxXTp1Cd0ErxEHpPSGuF4Hk&sig=AOD64_38ykNPf0QRtI9n4CFtpQpth-MrNQ&q=&ved=0ahUKEwjswKvT5KjcAhVkU98KHUcYCeMQ0QwIJA&adurl=)
+registro de visitantes. Con la entrada de [WeWork](https://www.wework.com/l/guadalajara)
 al mercado latinoamericano, tienen mucha más competencia y necesitan invertir en
 tecnología para mejorar su servicio; el registro de visitantes es un primer
 acercamiento. Te dan la referencia de [Envoy](https://envoy.com/) en EEUU (un
@@ -24,8 +24,7 @@ tienen que desarrollar una versión mínima viable (ver anexo I abajo).
 ## Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que pongas en práctica todo lo
-aprendido hasta ahora, con foco en la calidad, trabajando en un
-equipo multifuncional y presentando tu solución a una audiencia.
+aprendido hasta ahora, con foco en la calidad, trabajando en duplas y presentando un demo con tu solución.
 
 ## Consideraciones generales
 
@@ -45,7 +44,7 @@ el diseño, el desarrollo y la planificación.
 
 TIPS:
 
-* Recuerda a nuestras nuevas BFFs, [las historias de usuario](http://jmbeas.es/guias/historias-de-usuario/)
+* Recuerda a nuestras BFFs, [las historias de usuario](http://jmbeas.es/guias/historias-de-usuario/)
 * Ten siempre en mente evitar el desperdicio. Por ejemplo: ¿de qué sirve que
   tengas el prototipo del 100% de un proyecto en Figma (alta definición) si
   solamente implementas el 50% del proyecto? El otro 50% del prototipo se podría
@@ -121,9 +120,9 @@ Las reglas para la presentación son:
 2. Habrán 2 minutos para preguntas.
 3. Te recomendamos que la mayoría del tiempo lo enfoque en demostrar cómo se
    utiliza tu producto, el cual debe estar desplegado en la web.
-   * NO se permite presentar cosas en tu local ni videos previamente grabados.
-   * NO utilices slides de powerpoint, enfócate en presentar tu DEMO.
-   * Durante el DEMO, enfócate en narrar y explicar el valor que tu producto le
+   * No se permite presentar cosas en tu local ni videos previamente grabados.
+   * No utilices slides de powerpoint, enfócate en presentar tu demo.
+   * Durante el demo, enfócate en narrar y explicar el valor que tu producto le
      brinda al usuario.
    * Cuida tu lenguaje no verbal; recuerda mirar al público y tener un tono de
      voz adecuado para que toda la audiencia te pueda escuchar.
