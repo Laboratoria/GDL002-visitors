@@ -29,22 +29,25 @@
 								<!-- informacion de Contacto -->
 								
 
-												<input type="email" id ="email" placeholder="ingresa tu email 📧"/>
+												<!--<input type="email" id ="email" placeholder="ingresa tu email 📧"/>
 												<input type = "password" id = "contraseña" placeholder="ingresa tu contraseña"/>
 
+												-->
+												<!--se agrego nuevo metodo de guardar datos del visitante-->
+												<div class = "container">
+														<h1> Agregar usuarios</h1>
+														<input type="text" id = "nombre" placeholder="Nombre">
+														<input type="text" id = "apellido" placeholder="Apellido">
+														<input type = "text" id = "email" placeholder="ejemplo@gmail.com">
+														<input type="text" id = "fecha" placeholder="¿Que día es hoy?">
+														<input type="text" id = "motivo" placeholder="¿A quien visitas?">
+													  </div>
+
+													
+
 												
-
-
-
-												<section class="visita">
-													<select id="dropDownSelecter">
-													<option value = "host" >¿A quien visitas?</option>
-													<option value = "host1" >Laboratoria</option>
-													<option value = "host1" >Plaza Sania</option>
-													 </select>	
-												</section>
-
-													<button onclick="registrar()">enviar</button>
+  
+													<button onclick="guardar()">Guardar</button>
 												 
 									
 								
@@ -60,9 +63,8 @@
 
 
 <script src = "https://www.gstatic.com/firebasejs/5.9.3/firebase.js" ></script>
-<script src = "../JS/camara.js " > </script>
-
 <script src = "../JS/app.js"> </script>
+<script src = "../JS/administrador.js"></script>
 
 </body>
 </html>
