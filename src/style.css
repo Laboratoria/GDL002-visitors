@@ -146,22 +146,24 @@ position: left;
     border-radius: 6px;
     background-color: black;
   }
+  /*tabla*/
+
   .table > tbody > tr:hover {
-    background-color: #F2F2F2;
+    background-color: rgb(195, 228, 238);
     cursor: pointer;
   }
   table {
-    font-family: arial, sans-serif;
+    font-family: "Comfortaa";
     border-collapse: collapse;
     width: 100%;
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #ffffff;
     text-align: left;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #c3d3d460;
   }
