@@ -84,6 +84,7 @@ function ingreso() {
         contenido.innerHTML = `<script src = "../pantallas/administracion.html"> </script>
         <p>Bienvenidx ${user.email}</p>
         <h1>Estos son los visitantes del Día </h1>
+        
         <button onclick = "cerrar()" >Cerrar sesión</button>
         `;
         }
