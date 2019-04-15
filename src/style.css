@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Kite+One");
+/* BG */
+
+body.is-preload #bg:before {
+    background-color: transparent;
+}
+/* Header */
+
+body.is-preload #header {
+    -moz-filter: none;
+    -webkit-filter: none;
+    -ms-filter: none;
+    filter: none;
+}
+
+    body.is-preload #header > * {
+        opacity: 1;
+    }
+
+    body.is-preload #header .content .inner {
+        max-height: none;
+        padding: 3rem 2rem;
+        opacity: 1;
+    }
+
+/* Main */
+
+#main article {
+    opacity: 1;
+    margin: 4rem 0 0 0;
+}
+
+img{
+  width : 20em; 
+  height: 20em;
+    max-width: 100%;
+    height: auto;
+    display:block;
+    margin:auto;
+  }
+
+
+body, input, select, textarea {
+    color: #237286;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(47, 70, 90);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(202, 202, 202);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgba(121, 139, 156, 0.699);
+  }
+  
+  .active {
+    background-color: rgb(39, 185, 196);
+  }
+input{
+  float:none;
+    margin: .5em auto; 
+    display: block;
+    
+}
+#dropDownSelecter{
+  float:none;
+    margin: auto; 
+    display: block;
+}
+  button {
+    background-color: rgba(21, 180, 228, 0.199);
+    border: none;
+    color: rgb(0, 11, 71);
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    float:none;
+    margin: .5em auto; 
+    display: block
+    
+    
+  }
+  button:hover {
+    background-color:  rgba(121, 139, 156, 0.699);
+  }
+  a:link 
+  { 
+  text-decoration:none; 
+  } 
+  p{
+    font-family: "Kite One" ;
+    font-size: 2em;
+    color: #237286;
+    text-align: center;
+  }
+
+  h1{
+    font-family: "Comfortaa" ;
+    font-size: 3em;
+    color: #677f85;
+    text-align: center;
+  }
+h2{
+  font-family: "Kite One" ;
+    font-size: 2em;
+    color: #237286;
+    text-align: center;
+}
+#visita{
+position: left;
+}
+  /*camara*/
+  .oculto {
+    visibility: hidden;
+  }
+  #contenedor {
+    word-break: break-all;
+  }
+  .box-cam-mic .video-cam {
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    background-color: black;
+  }
+  .table > tbody > tr:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../style.css" />
+	
+
+</head>
+<body>
+
+
+	<header id="header">
+		<nav>
+			<ul>
+				<li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
+				<li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+				
+				<li><a href="../pantallas/administracion.html">Administración</a></li>
+			</ul>
+		</nav>
+		</header>
+<!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+		
+
+								<!-- informacion de Contacto -->
+								
+
+												<input type="email" id ="email" placeholder="ingresa tu email 📧"/>
+												<input type = "password" id = "contraseña" placeholder="ingresa tu contraseña"/>
+
+												
+
+
+
+												<section class="visita">
+													<select id="dropDownSelecter">
+													<option value = "host" >¿A quien visitas?</option>
+													<option value = "host1" >Laboratoria</option>
+													<option value = "host1" >Plaza Sania</option>
+													 </select>	
+												</section>
+
+													<button onclick="registrar()">enviar</button>
+												 
+									
+								
+
+	
+												
+													<input type="file" accept="image/*" capture="camera" id="camera">
+<img id="frame">
+													<video id="player" controls autoplay></video>
+<button onclick="capture()">Capturar</button>
+<canvas id="snapshot" width=320 height=240></canvas>
+
+
+
+<script src = "https://www.gstatic.com/firebasejs/5.9.3/firebase.js" ></script>
+<script src = "../JS/camara.js " > </script>
+
+<script src = "../JS/app.js"> </script>
+
+</body>
+</html>

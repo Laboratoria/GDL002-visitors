@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+   
+</head>
+<body>
+        <header id="header">
+                <nav>
+                    <ul>
+                        <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
+                        <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+                        <li><a href="../pantallas/administracion.html">Administración </a></li>
+                    </ul>
+                </nav>
+                </header>
+                
+
+		<input type="email" id ="emailadministrador" placeholder="ingresa tu email 📧 "/>
+		<input type = "password" id = "contraseñaadministrador" placeholder="ingresa tu contraseña 🔒 "/>
+
+		<button onclick="ingreso()">enviar</button>
+		
+		<div id = "contenido"> 
+		</div>
+
+        <body ng-cloak ng-app="TablaDemo">
+                <br>
+                <div class="container" ng-controller="TablaCtrl">
+                  <h1>Tabla con contenido editable</h1>
+                  <br>
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Correo Electrónico</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="item in lista">
+                            <td style="cursor: not-allowed;">
+                              {{$index + 1}}
+                            </td>
+                            <td editable-td row="{{$index}}" field="nombres">
+                              {{item.nombres}}
+                            </td>
+                            <td editable-td row="{{$index}}" field="apellidos">
+                              {{item.apellidos}}
+                            </td>
+                            <td editable-td row="{{$index}}" field="email">
+                              {{item.email}}
+                            </td>
+                            <td>
+                              <span class="glyphicon glyphicon-trash" style="cursor: pointer;" ng-click='eliminar($index)' />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button class="btn btn-default" ng-click='agregar()'>
+                          <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" ng-click='recuperarValores()'>Recuperar Valores</button>
+                      </div>
+                      <br>
+                      <br>
+                      <div id='JSON' />
+                    </div>
+                  </div>
+                </div>
+              
+                <small>
+
+<script src = "https://www.gstatic.com/firebasejs/5.9.3/firebase.js" ></script>
+<script src = "../JS/app.js"></script>
+<script src = "../JS/bitacora.js"></script>
+</body>
+</html>
+
