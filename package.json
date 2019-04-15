@@ -1,0 +1,42 @@
+{
+  "name": "GDL002-visitors",
+  "version": "1.0.0",
+  "description": "## Preámbulo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "eslint src test",
+    "test": "jest --coverage",
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --content-base dist/ --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudiaGarfias/GDL002-visitors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudiaGarfias/GDL002-visitors/issues"
+  },
+  "homepage": "https://github.com/ClaudiaGarfias/GDL002-visitors#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.1",
+    "jest": "^24.7.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "core-js": "^2.6.5"
+  }
+}

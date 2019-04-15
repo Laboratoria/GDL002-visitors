@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1555344940364" clover="3.2.0">
+  <project timestamp="1555344940364" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="6" methods="7" coveredmethods="7" elements="28" coveredelements="27" complexity="0" loc="14" ncloc="14" packages="3" files="6" classes="6"/>
+    <package name="components">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="Button.js" path="/home/laboratoria-175/000 claudia-laboratoria/0 VISITORS/GDL002-visitors/src/components/Button.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="RegisterButton.js" path="/home/laboratoria-175/000 claudia-laboratoria/0 VISITORS/GDL002-visitors/src/components/RegisterButton.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="input.js" path="/home/laboratoria-175/000 claudia-laboratoria/0 VISITORS/GDL002-visitors/src/components/input.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="lib">
+      <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <file name="createElement.js" path="/home/laboratoria-175/000 claudia-laboratoria/0 VISITORS/GDL002-visitors/src/lib/createElement.js">
+        <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="7" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+      <file name="render.js" path="/home/laboratoria-175/000 claudia-laboratoria/0 VISITORS/GDL002-visitors/src/lib/render.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="LogForm.js" path="/home/laboratoria-175/000 claudia-laboratoria/0 VISITORS/GDL002-visitors/src/pages/LogForm.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
