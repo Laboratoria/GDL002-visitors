@@ -1,34 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Kite+One");
 /* BG */
 
-body.is-preload #bg:before {
-    background-color: transparent;
-}
-/* Header */
-
-body.is-preload #header {
-    -moz-filter: none;
-    -webkit-filter: none;
-    -ms-filter: none;
-    filter: none;
-}
-
-    body.is-preload #header > * {
-        opacity: 1;
-    }
-
-    body.is-preload #header .content .inner {
-        max-height: none;
-        padding: 3rem 2rem;
-        opacity: 1;
-    }
-
-/* Main */
-
-#main article {
-    opacity: 1;
-    margin: 4rem 0 0 0;
-}
 
 img{
   width : 20em; 
@@ -82,13 +54,10 @@ input{
   float:none;
     margin: .5em auto; 
     display: block;
+    padding: .5em;;
     
 }
-#dropDownSelecter{
-  float:none;
-    margin: auto; 
-    display: block;
-}
+
   button {
     background-color: rgba(21, 180, 228, 0.199);
     border: none;
@@ -166,4 +135,18 @@ position: left;
   
   tr:nth-child(even) {
     background-color: #c3d3d460;
+  }
+  #mySelect{
+    cursor: pointer;
+    float:none;
+    margin: .5em auto; 
+    display: block;
+    font-family: "Comfortaa";
+    color: #237286;
+    padding: .4em;
+  }
+  video{
+    float:none;
+    margin: 5em auto; 
+    display: block;
   }

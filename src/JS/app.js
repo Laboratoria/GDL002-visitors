@@ -11,16 +11,16 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-function registrar() {
+function registrar() { //funcion para registrar con variable email y contraseña en caso de ser admin
     
     var email = document.getElementById ("email").value;
     var contrasena = document.getElementById ("contraseña").value;
 
-    var dropDownSelecter = document.getElementById ("dropDownSelecter").value;
+    //var dropDownSelecter = document.getElementById ("dropDownSelecter").value;
     //console.log (email);
     //console.log (contrasena);
 
-    firebase.auth().createUserWithEmailAndPassword(email, contrasena)
+    firebase.auth().createUserWithEmailAndPassword(email, contrasena) //se crea el usuario verificando  con correo electronico
     .then(function(){
         verificar()
     })
@@ -36,7 +36,7 @@ function registrar() {
 }
 //ingreso de Administrador verificado
 function ingreso() {
-    
+    //se ingresa la contraseña, correo y se le da un valor, firebase cacha el error en caso de existir y regresa un console con el error
     var emailadministrador = document.getElementById ("emailadministrador").value;
     var contrasenaadministrador = document.getElementById ("contraseñaadministrador").value;
 
@@ -90,7 +90,7 @@ function ingreso() {
         }
     }
 
-
+//funcion cerrar de firebase le di funcionalidad y un console para comprobar lo que esta pasando
     function cerrar(){
         firebase.auth().signOut()
         .then(function(){
@@ -113,8 +113,8 @@ user.sendEmailVerification().then(function() {
 });
     }
 
-    //camara
-
+    //camara funcion de google
+    function camera(){
 var camera = document.getElementById('camera');
 var frame = document.getElementById('frame');
 
@@ -124,7 +124,7 @@ camera.addEventListener('change', function(e) {
   frame.src = URL.createObjectURL(file);
 });
 
-
+    }
 
 var player = document.getElementById('player');
 
@@ -138,7 +138,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 
 var player = document.getElementById('player');
 var snapshotCanvas = document.getElementById('snapshot');
-var captureButton = document.getElementById('capture');
+var captureButton = document.getElementById("capture");
 var videoTracks;
 
 var handleSuccess = function(stream) {
@@ -146,8 +146,8 @@ var handleSuccess = function(stream) {
   player.srcObject = stream;
   videoTracks = stream.getVideoTracks();
 };
-
-captureButton.addEventListener('click', function() {
+function capture(){
+captureButton.addEventListener( function() {
   var context = snapshot.getContext('2d');
   // Draw the video frame to the canvas.
   context.drawImage(player, 0, 0, snapshotCanvas.width,
@@ -158,6 +158,6 @@ captureButton.addEventListener('click', function() {
 
 navigator.mediaDevices.getUserMedia({video: true})
     .then(handleSuccess);
-
+}
  
     
