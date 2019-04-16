@@ -16,9 +16,11 @@
         <header id="header">
                 <nav>
                     <ul>
+                        <div class = "topnav" id="myTopnav">
                         <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
                         <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                        <li><a href="../pantallas/administracion.html">Administración </a></li>
+                        <li><a href="../pantallas/administracion.html">Administración</a></li>
+                        <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
                     </ul>
                 </nav>
                 </header>
@@ -29,35 +31,22 @@
 
 		<button onclick="ingreso()">enviar</button>
 		
-		<div id = "contenido">  
-                <table class = "table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                        <th scope="col"> Nombre </th>
-                        <th scope="col"> Apellido </th>
-                        <th scope="col"> Fecha </th>
-                        <th scope="col"> Email </th>
-                        <th scope="col"> Motivo de visita </th>
-                        <th scope="col">Eliminar</th>
-                        </tr>
-                        </thead>
-                        
-                                <tbody id="tabla">
-                                <tr>
-                                <th scope="row"> 1 </th>
-                                
-                                  <td>Alex</td>
-                                  <td>Aviles</td>
-                                  <td>@algo</td>
-                                  <td> Laboratoria</td>
-                                  <td> 15/04/2019</td>
-                                </tr>
-                                </tbody>
-                              </table>
-                              </div>
-    </div>
-    
+		<div id = "contenido">  <table class = "table">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                <th scope="col"> Nombre </th>
+                <th scope="col"> Apellido </th>
+                <th scope="col"> Fecha </th>
+                <th scope="col"> Email </th>
+                <th scope="col"> Motivo de visita </th>
+                <th scope="col">Eliminar</th>
+                </tr>
+                </thead>
+                <tbody id="tabla">
+                            </div>
+		</div>
+               
    
 
 <script src = "https://www.gstatic.com/firebasejs/5.9.3/firebase.js" ></script>

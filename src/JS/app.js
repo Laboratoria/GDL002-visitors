@@ -85,6 +85,7 @@ function ingreso() {
         <p>Bienvenidx ${user.email}</p>
         <h1>Estos son los visitantes del Día </h1>
         
+    
         <button onclick = "cerrar()" >Cerrar sesión</button>
         `;
         }
@@ -136,28 +137,46 @@ navigator.mediaDevices.getUserMedia({video: true})
     .then(handleSuccess);
 
 
-var player = document.getElementById('player');
-var snapshotCanvas = document.getElementById('snapshot');
-var captureButton = document.getElementById("capture");
+var player = document.getElementById("player");
+var snapshotCanvas = document.getElementById("snapshot");
+var takepicture = document.getElementById("takepicture");
 var videoTracks;
 
 var handleSuccess = function(stream) {
   // Attach the video stream to the video element and autoplay.
   player.srcObject = stream;
   videoTracks = stream.getVideoTracks();
-};
-function capture(){
-captureButton.addEventListener( function() {
-  var context = snapshot.getContext('2d');
-  // Draw the video frame to the canvas.
-  context.drawImage(player, 0, 0, snapshotCanvas.width,
-      snapshotCanvas.height);
-      //stop all video streams.
-      videoTracks.forEach(function(track) {track.stop()});
-});
+
+
 
 navigator.mediaDevices.getUserMedia({video: true})
     .then(handleSuccess);
-}
+};
  
     
+function takepicture() {
+  var context = canvas.getContext('2d');
+  if (width && height) {
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(video, 0, 0, width, height);
+  
+    var data = canvas.toDataURL('image/png');
+    photo.setAttribute('src', data);
+  } else {
+    clearphoto();
+  }
+}
+
+// Set up our event listener to run the startup process
+// once loading is complete.
+
+//menu
+function mymenu() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}

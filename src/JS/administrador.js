@@ -44,7 +44,7 @@ function guardar(){
 //pasa los datos de mi coleccion visitantes y los acomoda en cada espacio declarado en mis doc
 var tabla = document.getElementById("tabla");
 db.collection("visitantes").onSnapshot((querySnapshot) => {
-  tabla.innerHTML = ' ';
+  tabla.innerHTML = "";
   querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
       tabla.innerHTML += `  

@@ -10,18 +10,17 @@
 
 </head>
 <body>
-
-
-	<header id="header">
-		<nav>
-			<ul>
-				<li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
-				<li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-				
-				<li><a href="../pantallas/administracion.html">Administración</a></li>
-			</ul>
-		</nav>
-		</header>
+		<header id="header">
+				<nav>
+					<ul>
+						<div class = "topnav" id="myTopnav">
+						<li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
+						<li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+						<li><a href="../pantallas/administracion.html">Administración</a></li>
+						<a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+					</ul>
+				</nav>
+				</header>
 <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
 		
@@ -60,7 +59,7 @@
 	
 												
 													<video id="player" controls autoplay></video>
-<button onclick="capture()">Tomar foto</button>
+<button onclick="takepicture">Tomar foto</button>
 <canvas id="snapshot" width=320 height=240></canvas>
 
 
