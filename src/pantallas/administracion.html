@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <!---Firestore--->
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-    	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-        <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../style.css" />
+    <!---Firestore--->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Document</title>
-   
+
 </head>
+
 <body>
-        <header id="header">
-                <nav>
-                    <ul>
-                        <div class = "topnav" id="myTopnav">
-                        <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
-                        <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                        <li><a href="../pantallas/administracion.html">Administración</a></li>
-                        <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
-                    </ul>
-                </nav>
-                </header>
-                
+    <header id="header">
+        <nav>
+            <ul>
+                <div class="topnav" id="myTopnav">
+                    <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
+                    <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+                    <li><a href="../pantallas/administracion.html">Administración</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+            </ul>
+        </nav>
+    </header>
 
-		<input type="email" id ="emailadministrador" placeholder="ingresa tu email 📧 "/>
-		<input type = "password" id = "contraseñaadministrador" placeholder="ingresa tu contraseña 🔒 "/>
 
-		<button onclick="ingreso()">enviar</button>
-		
-		<div id = "contenido">  <table class = "table">
-                <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                <th scope="col"> Nombre </th>
-                <th scope="col"> Apellido </th>
-                <th scope="col"> Fecha </th>
-                <th scope="col"> Email </th>
-                <th scope="col"> Motivo de visita </th>
-                <th scope="col">Eliminar</th>
-                </tr>
-                </thead>
-                <tbody id="tabla">
-                            </div>
-		</div>
-               
-   
+    <input type="email" id="email" placeholder="ingresa tu email 📧 " />
+    <input type="password" id="contraseña" placeholder="ingresa tu contraseña 🔒 " />
+    <h4>Olvidaste tu contraseña? <href="../pantallas/ingreso.html">a </href> </h4> <button onclick="ingreso()" placeholder="Iniciar sesión como Administrador">Iniciar sesión</button>
+            <button onclick="registrar()" title="¿Aún no tienes una cuenta?">Registrar</button>
+            <div id="contenido">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col"> Nombre </th>
+                            <th scope="col"> Apellido </th>
+                            <th scope="col"> Fecha </th>
+                            <th scope="col"> Email </th>
+                            <th scope="col"> Motivo de visita </th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla">
+            </div>
+            </div>
 
-<script src = "https://www.gstatic.com/firebasejs/5.9.3/firebase.js" ></script>
-<script src = "../JS/app.js"></script>
-<script src = "../JS/administrador.js"></script>
+
+
+            <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+            <script src="../JS/app.js"></script>
+            <script src="../JS/administrador.js"></script>
 </body>
-</html>
 
+</html>

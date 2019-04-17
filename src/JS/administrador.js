@@ -1,41 +1,39 @@
-
-
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 
 
 //función para guardar los datos del usuario visitante
-function guardar(){
+function guardar() {
 
-  var nombre = document.getElementById("nombre").value; //variable para guardar el nombre
-  var apellido = document.getElementById("apellido").value; // variable para guardar el apellido
-  var email = document.getElementById("email").value; // variable para guardar la dirección de correo electronico
-  var fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
-  var mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
-  
-  
+    var nombre = document.getElementById("nombre").value; //variable para guardar el nombre
+    var apellido = document.getElementById("apellido").value; // variable para guardar el apellido
+    var email = document.getElementById("email").value; // variable para guardar la dirección de correo electronico
+    var fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
+    var mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
 
-// los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
-  db.collection("visitantes").add({
-    nombre: nombre,
-    apellido: apellido,
-    entrada: fecha,
-    email: email,
-    mySelect: mySelect
-   
-  })
-  .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
-    console.log("Document written with ID: ", docRef.id);
-    var nombre = document.getElementById("nombre").value =  '';  //se agregó un string vacio para reiniciar los campos cuando los datos se guarden//
-  var apellido = document.getElementById("apellido").value = '';
-  var email = document.getElementById("email").value = '';
-  var fecha = document.getElementById("fecha").value = '';
-  var mySelect = document.getElementById("mySelect").value = '';
 
-  })
-  .catch(function(error) {
-    console.error("Error adding document: ", error);
-  });
+
+    // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
+    db.collection("visitantes").add({
+            nombre: nombre,
+            apellido: apellido,
+            entrada: fecha,
+            email: email,
+            mySelect: mySelect
+
+        })
+        .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
+            console.log("Document written with ID: ", docRef.id);
+            var nombre = document.getElementById("nombre").value = ''; //se agregó un string vacio para reiniciar los campos cuando los datos se guarden//
+            var apellido = document.getElementById("apellido").value = '';
+            var email = document.getElementById("email").value = '';
+            var fecha = document.getElementById("fecha").value = '';
+            var mySelect = document.getElementById("mySelect").value = '';
+
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
 
 }
 //usamos forEach para crear un ciclo
@@ -44,10 +42,10 @@ function guardar(){
 //pasa los datos de mi coleccion visitantes y los acomoda en cada espacio declarado en mis doc
 var tabla = document.getElementById("tabla");
 db.collection("visitantes").onSnapshot((querySnapshot) => {
-  tabla.innerHTML = "";
-  querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
-      tabla.innerHTML += `  
+    tabla.innerHTML = "";
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+        tabla.innerHTML += `  
       <tr>
       <th scope="row"> ${doc.id} </th>
         <td>${doc.data().nombre}</td>
@@ -58,28 +56,27 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
        
        <td><button onclick="eliminar('${doc.id}')" title="Boton Eliminar"> ❌</button></td>
       </tr>
-      `
-      ;
-  });
+      `;
+    });
 });
 // se cambio db.collection("visitantes").get (.onSnapshot(querySnapshot) => {
 // por db.collection("visitantes").onSnapshot((querySnapshot) => {
-  //para que agregue cambios en tiempo real sin tener que actualizar la pag
-  //En boton eliminar cambiamos los parametros y le pasamos el id correspondiente a la fila
+//para que agregue cambios en tiempo real sin tener que actualizar la pag
+//En boton eliminar cambiamos los parametros y le pasamos el id correspondiente a la fila
 
-  //borrar datos
-  function eliminar (id){
+//borrar datos
+function eliminar(id) {
     db.collection("visitantes").doc(id).delete().then(function() {
-      console.log("Document successfully deleted!");
-  }).catch(function(error) {
-      console.error("Error removing document: ", error);
-  });
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
 
-  }
-  //funcion para seleccionar el motivo de la visita declarando la variable x como laboratoria
-  //declarando la variable i como plaza S, regresando la opcion en demo
-  function myFunction() {
+}
+//funcion para seleccionar el motivo de la visita declarando la variable x como laboratoria
+//declarando la variable i como plaza S, regresando la opcion en demo
+function myFunction() {
     var x = document.getElementById("mySelect");
     var i = x.selectedIndex;
     document.getElementById("demo").innerHTML = x.options[i].text;
-  }
+}

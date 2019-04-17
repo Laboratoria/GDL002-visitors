@@ -2,22 +2,24 @@
 /* BG */
 
 
-img{
-  width : 20em; 
-  height: 20em;
+img {
+    width: 15em;
+    height: 15em;
     max-width: 100%;
     height: auto;
-    display:block;
-    margin:auto;
-  }
+    display: block;
+    margin: auto;
+}
 
 
-body, input, select, textarea {
-    color: #237286;
+body,
+select,
+textarea {
+
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    
+
 }
 
 ul {
@@ -26,183 +28,226 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(47, 70, 90);
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     top: 0;
-  }
-  
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: rgb(202, 202, 202);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: rgba(121, 139, 156, 0.699);
-  }
-  
-  .active {
-    background-color: rgb(39, 185, 196);
-  }
-input{
-  float:none;
-    margin: .5em auto; 
-    display: block;
-    padding: .5em;;
-    
 }
 
-  button {
-    background-color: rgba(21, 180, 228, 0.199);
+li a:hover {
+    background-color: rgba(121, 139, 156, 0.699);
+}
+
+.active {
+    background-color: rgb(39, 185, 196);
+}
+
+input {
+    float: none;
+    margin: .5em auto;
+    display: block;
+    padding: 1em;
+    color: #014657;
+    font-family: "Comfortaa";
+    font-weight: 300;
+    font-size: .8rem;
+    border-radius: 5%;
+
+}
+
+h4 {
+    color: #014657;
+    text-align: center;
+    font-size: .6em;
+    margin: 0;
+}
+
+button {
+    background-color: rgb(170, 204, 212);
     border: none;
-    color: rgb(0, 11, 71);
+    color: rgb(4, 118, 146);
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    float:none;
-    margin: .5em auto; 
-    display: block
-    
-    
-  }
-  button:hover {
-    background-color:  rgba(121, 139, 156, 0.699);
-  }
-  a:link 
-  { 
-  text-decoration:none; 
-  } 
-  p{
-    font-family: "Kite One" ;
+    float: none;
+    margin: .3em auto;
+    display: block;
+    font-family: "Comfortaa";
+
+
+}
+
+button:hover {
+    background-color: rgba(121, 139, 156, 0.699);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+p {
+    font-family: "Kite One";
     font-size: 2em;
     color: #237286;
     text-align: center;
-  }
+}
 
-  h1{
-    font-family: "Comfortaa" ;
+h1 {
+    font-family: "Comfortaa";
     font-size: 3em;
     color: #677f85;
     text-align: center;
-  }
-h2{
-  font-family: "Kite One" ;
+}
+
+h2 {
+    font-family: "Kite One";
     font-size: 2em;
     color: #237286;
     text-align: center;
 }
-#visita{
-position: left;
+
+h3 {
+    font-family: "Kite One";
+    font-size: 1em;
+    color: #1f839c;
+    text-align: center;
 }
-  /*camara*/
-  .oculto {
+
+#visita {
+    position: left;
+}
+
+/*camara*/
+.oculto {
     visibility: hidden;
-  }
-  #contenedor {
+}
+
+#contenedor {
     word-break: break-all;
-  }
-  .box-cam-mic .video-cam {
+}
+
+.box-cam-mic .video-cam {
     width: auto;
     height: auto;
     border-radius: 6px;
     background-color: black;
-  }
-  /*tabla*/
+}
 
-  .table > tbody > tr:hover {
-    background-color: rgb(195, 228, 238);
+/*tabla*/
+
+.table>tbody>tr:hover {
+    background-color: rgb(84, 157, 179);
     cursor: pointer;
-  }
-  table {
+
+}
+
+table {
     font-family: "Comfortaa";
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  td, th {
+    color: rgba(7, 69, 94, 0.979);
+}
+
+td,
+th {
     border: 1px solid #ffffff;
     text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #c3d3d460;
-  }
-  #mySelect{
+    padding: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #07507260;
+}
+
+#mySelect {
     cursor: pointer;
-    float:none;
-    margin: .5em auto; 
+    float: none;
+    margin: .5em auto;
     display: block;
     font-family: "Comfortaa";
     color: #237286;
-    padding: .4em;
-  }
-  video{
-    float:none;
-    margin: 5em auto; 
-    display: block;
-  }
+    padding: .8em;
+}
 
-  body {
+video {
+    float: none;
+    margin: 5em auto;
+    display: block;
+}
+
+body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .topnav {
+    font-family: "Comfortaa";
+}
+
+.topnav {
     overflow: hidden;
-    background-color: rgba(216, 216, 216, 0.493);
-  }
-  
-  .topnav a {
+    background-color: rgb(170, 204, 212);
+}
+
+.topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #02424b;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
-  .topnav a:hover {
+}
+
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
-  
-  .active {
-    background-color: rgb(76, 175, 158);
+}
+
+.active {
+    background-color: rgb(255, 255, 255);
     color: white;
-  }
-  
-  .topnav .icon {
+}
+
+.topnav .icon {
     display: none;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
     .topnav a.icon {
-      float: right;
-      display: block;
+        float: right;
+        display: block;
     }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
     .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
+
     .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+        float: none;
+        display: block;
+        text-align: left;
     }
-  }
+}

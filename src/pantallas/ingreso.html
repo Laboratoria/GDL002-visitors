@@ -1,72 +1,75 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-        <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../style.css" />
-	
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../style.css" />
+
 
 </head>
+
 <body>
-		<header id="header">
-				<nav>
-					<ul>
-						<div class = "topnav" id="myTopnav">
-						<li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
-						<li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-						<li><a href="../pantallas/administracion.html">Administración</a></li>
-						<a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
-					</ul>
-				</nav>
-				</header>
-<!-- The surrounding HTML is left untouched by FirebaseUI.
+    <header id="header">
+        <nav>
+            <ul>
+                <div class="topnav" id="myTopnav">
+                    <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
+                    <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+                    <li><a href="../pantallas/administracion.html">Administración</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+            </ul>
+        </nav>
+    </header>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
-		
 
-								<!-- informacion de Contacto -->
-								
 
-												<!--<input type="email" id ="email" placeholder="ingresa tu email 📧"/>
+    <!-- informacion de Contacto -->
+
+
+    <!--<input type="email" id ="email" placeholder="ingresa tu email 📧"/>
 												<input type = "password" id = "contraseña" placeholder="ingresa tu contraseña"/>
 
 												-->
-												<!--se agrego nuevo metodo de guardar datos del visitante-->
-												<div class = "container">
-														<h1> Agregar usuarios</h1>
-														<input type="text" id = "nombre" placeholder="Tu nombre va acá">
-														<input type="text" id = "apellido" placeholder="Y tu Apellido es...?">
-														<input type="text" id = "email" placeholder="ejemplo@blabla.com">
-														<input type="text" id = "fecha" placeholder="¿Que día es hoy?">
-													
-														<!--<input type="text" id = "motivo" placeholder="¿A quien visitas?">-->
-													  
+    <!--se agrego nuevo metodo de guardar datos del visitante-->
+    <div class="container">
+        <h1> Agregar usuarios</h1>
+        <input type="text" id="nombre" placeholder="Tu nombre va acá">
+        <input type="text" id="apellido" placeholder="Y tu Apellido es...?">
+        <input type="text" id="email" placeholder="ejemplo@blabla.com">
+        <input type="text" id="fecha" placeholder="¿Que día es hoy?">
 
-														<form>
-																<select id="mySelect" onchange="myFunction()">
-																	<option> ¿A quien visitas?  </option>
-																	<option>Laboratoria</option>
-																	<option>Plaza Sania</option>
-																</select>
-															</form>
-															
-															<p id="demo"></p>
-												</div>
-  
-													<button onclick="guardar()"title="Almacenar en Database">Guardar</button>
+        <!--<input type="text" id = "motivo" placeholder="¿A quien visitas?">-->
 
-	
-												
-													<video id="player" controls autoplay></video>
-<button onclick="takepicture">Tomar foto</button>
-<canvas id="snapshot" width=320 height=240></canvas>
+
+        <form>
+            <select id="mySelect" onchange="myFunction()">
+                <option> ¿A quien visitas? </option>
+                <option>Laboratoria</option>
+                <option>Plaza Sania</option>
+            </select>
+        </form>
+
+        <p id="demo"></p>
+    </div>
+
+    <button onclick="guardar()" title="Almacenar en Database">Guardar</button>
 
 
 
-<script src = "https://www.gstatic.com/firebasejs/5.9.3/firebase.js" ></script>
-<script src = "../JS/app.js"> </script>
-<script src = "../JS/administrador.js"></script>
+    <video id="player" controls autoplay></video>
+    <button onclick="takepicture">Tomar foto</button>
+    <canvas id="snapshot" width=320 height=240></canvas>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="../JS/app.js"> </script>
+    <script src="../JS/administrador.js"></script>
 
 </body>
+
 </html>
