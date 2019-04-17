@@ -3,23 +3,27 @@
 
 
 img {
-    width: 15em;
-    height: 15em;
+    width: 20em;
+    height: 20em;
     max-width: 100%;
-    height: auto;
-    display: block;
+    float: left;
     margin: auto;
+    margin-left: 280px;
+
 }
 
 
-body,
-select,
-textarea {
+body {
 
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 1rem;
+   
+    margin: 138px;
 
+}
+body:focus { 
+  outline: none;
 }
 
 ul {
@@ -78,7 +82,7 @@ button {
     background-color: rgb(170, 204, 212);
     border: none;
     color: rgb(4, 118, 146);
-    padding: 15px 15px;
+    padding: 1em 1em 1em 1em;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -110,14 +114,16 @@ h1 {
     font-family: "Comfortaa";
     font-size: 3em;
     color: #677f85;
-    text-align: center;
+    text-align: left;
+    margin-left: 150px;
 }
 
 h2 {
-    font-family: "Kite One";
-    font-size: 2em;
+    font-family: "Comfortaa";
+    font-size: 3em;
     color: #237286;
     text-align: center;
+   
 }
 
 h3 {
@@ -125,6 +131,7 @@ h3 {
     font-size: 1em;
     color: #1f839c;
     text-align: center;
+    margin: auto;
 }
 
 #visita {
@@ -145,6 +152,7 @@ h3 {
     height: auto;
     border-radius: 6px;
     background-color: black;
+    
 }
 
 /*tabla*/
@@ -187,6 +195,7 @@ video {
     float: none;
     margin: 5em auto;
     display: block;
+    
 }
 
 body {
@@ -250,4 +259,12 @@ body {
         display: block;
         text-align: left;
     }
+}
+.container{
+  margin-right: 580px;
+  margin-top: 2em;
+}
+#player{
+  margin-right: 280px;
+  margin-top:-22em;
 }
