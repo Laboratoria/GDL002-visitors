@@ -10,7 +10,7 @@ function guardar() {
     var email = document.getElementById("email").value; // variable para guardar la dirección de correo electronico
     var fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
     var mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
-
+    var tiempo = document.getElementById("tiempo").value;
 
 
     // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
@@ -19,7 +19,8 @@ function guardar() {
             apellido: apellido,
             entrada: fecha,
             email: email,
-            mySelect: mySelect
+            mySelect: mySelect,
+            tiempo: tiempo
 
         })
         .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
@@ -29,6 +30,7 @@ function guardar() {
             var email = document.getElementById("email").value = '';
             var fecha = document.getElementById("fecha").value = '';
             var mySelect = document.getElementById("mySelect").value = '';
+            var tiempo = document.getElementById("tiempo").value = '';
 
         })
         .catch(function(error) {
@@ -53,6 +55,7 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
         <td>${doc.data().entrada}</td>
         <td> ${doc.data().email}</td>
         <td> ${doc.data().mySelect}</td>
+        <td> ${doc.data().tiempo}</td>
        
        <td><button onclick="eliminar('${doc.id}')" title="Boton Eliminar"> ❌</button></td>
       </tr>
