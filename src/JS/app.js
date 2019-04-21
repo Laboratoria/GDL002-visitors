@@ -83,12 +83,12 @@ function aparece(user) {
   var contenido = document.getElementById("contenido");
   if (user.emailVerified) {
       contenido.innerHTML = `<script src = "../pantallas/administracion.html"> </script>
-      <p>Bienvenidx ${user.email}</p>
-      <h1>Estos son los visitantes del Día </h1>
-      
-  
-      <button onclick = "cerrar()" >Cerrar sesión</button>
-      `;
+    <p>Bienvenidx ${user.email}</p>
+    <h1>Estos son los visitantes del Día </h1>
+    
+
+    <button onclick = "cerrar()" >Cerrar sesión</button>
+    `;
   }
 }
 
@@ -116,66 +116,6 @@ function verificar() {
   });
 }
 
-//camara funcion de google
-function camera() {
-  var camera = document.getElementById('camera');
-  var frame = document.getElementById('frame');
-
-  camera.addEventListener('change', function(e) {
-      var file = e.target.files[0];
-      // Do something with the image file.
-      frame.src = URL.createObjectURL(file);
-  });
-
-}
-
-var player = document.getElementById('player');
-
-var handleSuccess = function(stream) {
-  player.srcObject = stream;
-};
-
-navigator.mediaDevices.getUserMedia({
-      video: true
-  })
-  .then(handleSuccess);
-
-
-var player = document.getElementById("player");
-var snapshotCanvas = document.getElementById("snapshot");
-var takepicture = document.getElementById("takepicture");
-var videoTracks;
-
-var handleSuccess = function(stream) {
-  // Attach the video stream to the video element and autoplay.
-  player.srcObject = stream;
-  videoTracks = stream.getVideoTracks();
-
-
-
-  navigator.mediaDevices.getUserMedia({
-          video: true
-      })
-      .then(handleSuccess);
-};
-
-
-function takepicture() {
-  var context = canvas.getContext('2d');
-  if (width && height) {
-      canvas.width = width;
-      canvas.height = height;
-      context.drawImage(video, 0, 0, width, height);
-
-      var data = canvas.toDataURL('image/png');
-      photo.setAttribute('src', data);
-  } else {
-      clearphoto();
-  }
-}
-
-// Set up our event listener to run the startup process
-// once loading is complete.
 
 //menu
 function mymenu() {
@@ -186,3 +126,26 @@ function mymenu() {
       x.className = "topnav";
   }
 }
+
+//camara
+var player = document.getElementById('player');
+var snapshotCanvas = document.getElementById('snapshot');
+var whiskyButton = document.getElementById('whisky');
+
+var handleSuccess = function(stream) {
+  //se concede el permiso y nos da acceso correcto a video con reproduciòn continua
+  player.srcObject = stream;
+};
+
+whiskyButton.addEventListener('click', function() {
+  var context = snapshot.getContext('2d');
+  //Aparece el cuadro de video al lienzo.
+  context.drawImage(player, 0, 0, snapshotCanvas.width,
+      snapshotCanvas.height);
+  console.log(context.canvas.toDataURL());
+});
+
+navigator.mediaDevices.getUserMedia({
+      video: true
+  })
+  .then(handleSuccess);

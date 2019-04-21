@@ -23,29 +23,18 @@
             </ul>
         </nav>
     </header>
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
 
+    <!--Campos para agregar informaciòn de cada nuevo visitante y se agregue a la colecciòn-->
+    <h2> Bienvenidx a Gurú Keys</h2>
+    <section class="container">
 
-    <!-- informacion de Contacto -->
-
-
-    <!--<input type="email" id ="email" placeholder="ingresa tu email 📧"/>
-												<input type = "password" id = "contraseña" placeholder="ingresa tu contraseña"/>
-
-												-->
-	<!--se agrego nuevo metodo de guardar datos del visitante-->
-	<h2> Bienvenidx a Gurú Keys</h2>
-    <div class="container">
-		
         <input type="text" id="nombre" placeholder="Tu nombre va acá">
         <input type="text" id="apellido" placeholder="Y tu Apellido es...?">
         <input type="text" id="email" placeholder="ejemplo@blabla.com">
-		<input type="text" id="fecha" placeholder="¿Que día es hoy?">
-		<input type="text" id="tiempo" placeholder="Tiempo estimado de visita">
+        <input type="text" id="fecha" placeholder="¿Que día es hoy?">
+        <input type="text" id="tiempo" placeholder="Tiempo estimado de visita">
 
-        <!--<input type="text" id = "motivo" placeholder="¿A quien visitas?">-->
-
+        <canvas id="snapshot"></canvas>
 
         <form>
             <select id="mySelect" onchange="myFunction()">
@@ -56,17 +45,16 @@
         </form>
 
         <p id="demo"></p>
-    </div>
+        <button onclick="guardar()" title="Almacenar en Database"> Registrarme </button>
+    </section>
 
-    <button onclick="guardar()" title="Almacenar en Database">Registrarme</button>
-    <br><button onclick="takepicture" >Tomar foto 😀 </button>
+    <section id="foto">
 
-
-    <video id="player" controls autoplay></video>
-    
-    <canvas id="snapshot" width=120 height=140></canvas>
+        <video id="player" controls autoplay></video>
 
 
+    </section>
+    <button id="whisky" title="Foto de registro"> Tomar Foto 😬 </button>
 
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src="../JS/app.js"> </script>

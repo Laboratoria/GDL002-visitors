@@ -1,4 +1,5 @@
-# Registro de Visitantes
+
+# Historias de usuario.
 
 Historias de Usuario.
 1. Yo como visitante necesito poder elegir al usuario de coworking a quien visito.
@@ -18,9 +19,10 @@ D.O.D
 ## Preámbulo
 
 Gurú Keys: Gestión inteligente de visitas 
- ¿Qué tal
-si sustituimos a la persona en recepción por una tablet? ¿Qué tal si en lugar de
-pedir una identificación, tomamos una foto?
+Sustituimos el registro tradicional de visitas por un Gurù que te facilitara el historico de visitantes con datos relevantes para un mejor control (Nombre, email, Fotografìa, a quien visita) estando en modo Administrador.
+Como usuario del Coworking podràs recibir una notificaciòn sin contratiempos cuando tengas alguna visita.
+Situando en una app facil de usar e intuitiva.
+
 
 ## Introducción
 
@@ -33,39 +35,7 @@ acercamiento. Te dan la referencia de [Envoy](https://envoy.com/) en EEUU (un
 servicio que ofrece un sistema digital de registro de visitantes) y ustedes
 tienen que desarrollar una versión mínima viable (ver anexo I abajo).
 
-## Objetivos de aprendizaje
-
-El objetivo principal de este proyecto es que pongas en práctica todo lo
-aprendido hasta ahora, con foco en la calidad, trabajando en duplas y presentando un demo con tu solución.
-
-## Consideraciones generales
-
-Para completar este proyecto deberás trabajar en un equipo de dos y seguir las
-siguientes consideraciones:
-
-### 1. Planificación y organización
-
-Planificación inicial
-
-Es muy importante que al dividirse/distribuir/repartir el trabajo, lo hagan
-pensando de manera ágil y no en cascada. Es decir, si una de ustedes está
-esperando a que otra termine "su parte" para empezar a trabajar, algo anda mal,
-¡[eso se parece a la organización del trabajo industrial!](https://media.giphy.com/media/OQ872dEsRi8cU/source.gif).
-Todas son responsables del producto final y todas pueden (y deben) colaborar en
-el diseño, el desarrollo y la planificación.
-
-TIPS:
-
-* Recuerda a nuestras BFFs, [las historias de usuario](http://jmbeas.es/guias/historias-de-usuario/)
-* Ten siempre en mente evitar el desperdicio. Por ejemplo: ¿de qué sirve que
-  tengas el prototipo del 100% de un proyecto en Figma (alta definición) si
-  solamente implementas el 50% del proyecto? El otro 50% del prototipo se podría
-  considerar como desperdicio.
-* Limitar el trabajo en progreso. Si son 2 personas, procuren no tener más de 2
-  tareas a la vez en "doing".
-* ¿Estás segura de que quieren seguir invirtiendo más minutos de tu vida (que no
-  volverán) en discutir los colores del logotipo?
-  [Aquí hay algo que te puede ayudar a decidir](https://play.google.com/store/apps/details?id=com.flip.war_daddy.flip_coin).
+3 entrevistas
 
 ### 2. Detalles sobre la implementación
 

@@ -103,7 +103,7 @@ a:link {
 
 p {
     font-family: "Kite One";
-    font-size: 2em;
+    font-size: 1.5em;
     color: #237286;
     text-align: center;
 }
@@ -136,22 +136,6 @@ h3 {
     position: left;
 }
 
-/*camara*/
-.oculto {
-    visibility: hidden;
-}
-
-#contenedor {
-    word-break: break-all;
-}
-
-.box-cam-mic .video-cam {
-    width: auto;
-    height: auto;
-    border-radius: 6em;
-    background-color: black;
-
-}
 
 /*tabla*/
 
@@ -189,12 +173,6 @@ tr:nth-child(even) {
     padding: .8em;
 }
 
-video {
-    float: none;
-    margin: 5em auto;
-    display: block;
-
-}
 
 body {
     margin: 0;
@@ -258,13 +236,48 @@ body {
         text-align: left;
     }
 }
-
+/*formulario de visita*/
 .container {
-    margin-right: 38em;
+    margin-right: 28em;
     margin-top: 2em;
 }
+/*/////////propiedades de camara/////////////*/
 
+video {
+    float: none;
+    margin: 5em auto;
+    display: block;
+
+}
+
+#whisky{
+    margin-left: 47em;
+    margin-top: 9em;
+    width: 25em;
+    height: 3.5em;
+    display: block;
+    color:#e9f2f3;
+    background-color:#02424b ;
+}
 #player {
-    margin-right: 10em;
-    margin-top: -28em;
+    margin-left: 47em;
+    margin-top: -25em;
+    width: 25em;
+    height: 20em;
+    border-radius: 10% 10% 0% 0%;
+}
+#foto{
+    width: 10em;
+    height: 10em;
+}
+
+canvas{
+    width: 13em;
+    height: 10em;
+    margin-right: 22em;
+    margin: 4em;
+    margin-top: -80%;
+    border-radius: 5%;
+  
+    
 }
