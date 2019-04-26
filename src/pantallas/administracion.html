@@ -21,15 +21,17 @@
                 <div class="topnav" id="myTopnav">
                     <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
                     <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+                    <li><a href="../pantallas/usuariocw.html">Usuario CW</a></li>
                     <li><a href="../pantallas/administracion.html">Administración</a></li>
                     <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
             </ul>
         </nav>
     </header>
 
+     
 
-    <input type="email" id="email" placeholder="Ingresa tu email 📧 " />
-    <input type="password" id="contraseña" placeholder="Ingresa tu contraseña 🔒 " />
+    <input type="email" id="email" placeholder="Ingresa tu email 📧 " autofocus="autofocus" />
+    <input type="password" id="contraseña" placeholder="Ingresa tu contraseña 🔒 " required="required" />
     <button onclick="ingreso()" placeholder="Iniciar sesión como Administrador">Iniciar sesión</button>
     <br><h3>¿Aún no tienes cuenta?</h3>
             <button onclick="registrar()" title="¿Aún no tienes una cuenta?">Unirme</button><br>
@@ -45,6 +47,7 @@
                             <th scope="col"> Motivo de visita </th>
                             <th scope="col"> Tiempo estimado de visita</th>
                             <th scope="col">Eliminar</th>
+                            
                         </tr>
                     </thead>
                     <tbody id="tabla">

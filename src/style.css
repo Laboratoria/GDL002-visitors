@@ -281,3 +281,11 @@ canvas{
   
     
 }
+/*Reloj*/
+
+#mainTitle{
+    border: #329D9D solid 20px;
+    border-radius: 5px;
+    font-family: 'Yellowtail', cursive;
+  }
+  

@@ -1,14 +1,4 @@
-// Initialize Firebase
-let config = {
-  apiKey: "AIzaSyCszMU_MgKV2XeIUYai4dpaUNlU6zz7IOw",
-  authDomain: "gurukeys-c2844.firebaseapp.com",
-  databaseURL: "https://gurukeys-c2844.firebaseio.com",
-  projectId: "gurukeys-c2844",
-  storageBucket: "gurukeys-c2844.appspot.com",
-  messagingSenderId: "1036765580106"
-};
 firebase.initializeApp(config);
-
 var database = firebase.database();
 
 function registrar() { //funcion para registrar con variable email y contraseña en caso de ser admin
@@ -37,10 +27,10 @@ function registrar() { //funcion para registrar con variable email y contraseña
 //ingreso de Administrador verificado
 function ingreso() {
   //se ingresa la contraseña, correo y se le da un valor, firebase cacha el error en caso de existir y regresa un console con el error
-  var emailadministrador = document.getElementById("email").value;
-  var contrasenaadministrador = document.getElementById("contraseña").value;
+  var emailusuariocw = document.getElementById("email").value;
+  var contrasenausuariocw = document.getElementById("contraseña").value;
 
-  firebase.auth().signInWithEmailAndPassword(emailadministrador, contrasenaadministrador)
+  firebase.auth().signInWithEmailAndPassword(emailusuariocw, contrasenausuariocw)
       .catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -82,9 +72,9 @@ function aparece(user) {
   var user = user;
   var contenido = document.getElementById("contenido");
   if (user.emailVerified) {
-      contenido.innerHTML = `<script src = "../pantallas/administracion.html"> </script>
+      contenido.innerHTML = `<script src = "../pantallas/usuarioscw.html"> </script>
     <p>Bienvenidx ${user.email}</p>
-    <h1>Estos son los visitantes del Día </h1>
+    <h1> </h1>
     
 
     <button onclick = "cerrar()" >Cerrar sesión</button>
@@ -117,35 +107,37 @@ function verificar() {
 }
 
 
-//menu
-function mymenu() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-      x.className += " responsive";
-  } else {
-      x.className = "topnav";
-  }
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+
+
+//función para guardar los datos del usuario visitante
+function guardar() {
+
+    var nombre = document.getElementById("nombre").value; //variable para guardar el nombre
+    var apellido = document.getElementById("apellido").value; // variable para guardar el apellido
+    var email = document.getElementById("email").value; // variable para guardar la dirección de correo electronico
+   
+
+
+    // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
+    db.collection("usuariocw").add({
+            nombre: nombre,
+            apellido: apellido,
+            email: email
+           
+
+        })
+        .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
+            console.log("Document written with ID: ", docRef.id);
+            var nombre = document.getElementById("nombre").value = ''; //se agregó un string vacio para reiniciar los campos cuando los datos se guarden//
+            var apellido = document.getElementById("apellido").value = '';
+            var email = document.getElementById("email").value = '';
+         
+
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+
 }
-
-//camara
-var player = document.getElementById('player');
-var snapshotCanvas = document.getElementById('snapshot');
-var whiskyButton = document.getElementById('whisky');
-
-var handleSuccess = function(stream) {
-  //se concede el permiso y nos da acceso correcto a video con reproduciòn continua
-  player.srcObject = stream;
-};
-
-whiskyButton.addEventListener('click', function() {
-  var context = snapshot.getContext('2d');
-  //Aparece el cuadro de video al lienzo.
-  context.drawImage(player, 0, 0, snapshotCanvas.width,
-      snapshotCanvas.height);
-  console.log(context.canvas.toDataURL());
-});
-
-navigator.mediaDevices.getUserMedia({
-      video: true
-  })
-  .then(handleSuccess);

@@ -47,6 +47,7 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
     tabla.innerHTML = "";
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
+        console.log(doc.data())
         tabla.innerHTML += `  
       <tr>
       <th scope="row"> ${doc.id} </th>
@@ -56,7 +57,7 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
         <td> ${doc.data().email}</td>
         <td> ${doc.data().mySelect}</td>
         <td> ${doc.data().tiempo}</td>
-       
+        
        <td><button onclick="eliminar('${doc.id}')" title="Boton Eliminar"> ❌</button></td>
       </tr>
       `;
@@ -83,3 +84,35 @@ function myFunction() {
     var i = x.selectedIndex;
     document.getElementById("demo").innerHTML = x.options[i].text;
 }
+
+
+//function convertTimestamp(timestamp) {
+//	var d = new Date(timestamp * 1000),	// Convert to milliseconds
+	/* 	yyyy = d.getFullYear(),
+		mm = ('0' + (d.getMonth() + 1)).slice(-2),	// Months are zero based. Add leading 0.
+		dd = ('0' + d.getDate()).slice(-2),			// Add leading 0.
+		hh = d.getHours(),
+		h = hh,
+		min = ('0' + d.getMinutes()).slice(-2),		// Add leading 0.
+		ampm = 'AM',
+		time;
+			
+	if (hh >= 12) {
+		h = hh - 12;
+		ampm = 'PM';
+	} else if (hh == 0) {
+		h = 12;
+	}
+	
+	// ie: 2013-02-18, 8:35 AM	
+	time = yyyy + '-' + mm + '-' + dd + ', ' + h + ':' + min + ' ' + ampm;
+		
+	return time;
+} */
+
+function convertTimestamp(timestamp){
+return dateFns.format(timestamp, 'MM/DD/YYYY')
+
+}
+var unixNow = (new Date()) ;
+document.write(convertTimestamp(unixNow));
