@@ -11,7 +11,8 @@ function guardar() {
     var fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
     var mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
     var tiempo = document.getElementById("tiempo").value;
-
+    var foto = document.getElementById("foto()");
+   
 
     // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
     db.collection("visitantes").add({
@@ -20,7 +21,8 @@ function guardar() {
             entrada: fecha,
             email: email,
             mySelect: mySelect,
-            tiempo: tiempo
+            tiempo: tiempo,
+            foto: foto
 
         })
         .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
@@ -31,6 +33,7 @@ function guardar() {
             var fecha = document.getElementById("fecha").value = '';
             var mySelect = document.getElementById("mySelect").value = '';
             var tiempo = document.getElementById("tiempo").value = '';
+            var foto = document.getElementById("foto").value = '';
 
         })
         .catch(function(error) {
@@ -38,6 +41,23 @@ function guardar() {
         });
 
 }
+
+
+
+function aparece(user) {
+    var user = user;
+    var contenido = document.getElementById("contenido");
+    if (user.emailVerified) {
+        contenido.innerHTML = `
+      <p>Bienvenidx ${user.email}
+      <div id="contenido">
+       
+      <button onclick = "cerrar()" >Cerrar sesión</button>
+      </div>
+      `;
+    }
+  }
+
 //usamos forEach para crear un ciclo
 //=+ hacemos que se agregue un nuevo dato
 //Leer datos en la tabla 
@@ -49,7 +69,8 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
         console.log(`${doc.id} => ${doc.data()}`);
         console.log(doc.data())
         tabla.innerHTML += `  
-      <tr>
+      
+        <tr>
       <th scope="row"> ${doc.id} </th>
         <td>${doc.data().nombre}</td>
         <td>${doc.data().apellido}</td>
@@ -57,6 +78,7 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
         <td> ${doc.data().email}</td>
         <td> ${doc.data().mySelect}</td>
         <td> ${doc.data().tiempo}</td>
+        <td> ${doc.data().foto}</td>
         
 
 
@@ -64,9 +86,12 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
        <td><button onclick="eliminar('${doc.id}')" title="Boton Eliminar"> ❌</button></td>
   
       </tr>
+      
       `;
     });
 });
+
+
 // se cambio db.collection("visitantes").get (.onSnapshot(querySnapshot) => {
 // por db.collection("visitantes").onSnapshot((querySnapshot) => {
 //para que agregue cambios en tiempo real sin tener que actualizar la pag
@@ -92,30 +117,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = x.options[i].text;
 }
 
-
-//function convertTimestamp(timestamp) {
-//	var d = new Date(timestamp * 1000),	// Convert to milliseconds
-	/* 	yyyy = d.getFullYear(),
-		mm = ('0' + (d.getMonth() + 1)).slice(-2),	// Months are zero based. Add leading 0.
-		dd = ('0' + d.getDate()).slice(-2),			// Add leading 0.
-		hh = d.getHours(),
-		h = hh,
-		min = ('0' + d.getMinutes()).slice(-2),		// Add leading 0.
-		ampm = 'AM',
-		time;
-			
-	if (hh >= 12) {
-		h = hh - 12;
-		ampm = 'PM';
-	} else if (hh == 0) {
-		h = 12;
-	}
-	
-	// ie: 2013-02-18, 8:35 AM	
-	time = yyyy + '-' + mm + '-' + dd + ', ' + h + ':' + min + ' ' + ampm;
-		
-	return time;
-} */
+/*
 
 function convertTimestamp(timestamp){
 return dateFns.format(timestamp, 'MM/DD/YYYY')
@@ -123,5 +125,5 @@ return dateFns.format(timestamp, 'MM/DD/YYYY')
 }
 var unixNow = (new Date()) ;
 document.write(convertTimestamp(unixNow));
-
+*/
 

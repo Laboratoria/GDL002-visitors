@@ -78,42 +78,6 @@ function observador() {
 }
 observador();
 
-function aparece(user) {
-  var user = user;
-  var contenido = document.getElementById("contenido");
-  if (user.emailVerified) {
-      contenido.innerHTML = `
-    <p>Bienvenidx ${user.email}</p>
-    <h1>Estos son los visitantes del Día </h1>
-    
-  
-
-    <div id="contenido">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col"> Nombre </th>
-                    <th scope="col"> Apellido </th>
-                    <th scope="col"> Fecha </th>
-                    <th scope="col"> Email </th>
-                    <th scope="col"> Motivo de visita </th>
-                    <th scope="col"> Tiempo estimado de visita</th>
-                    <th scope="col">Eliminar</th>
-                    
-                </tr>
-            </thead>
-            <tbody id="tabla">
-    </div>
-    </div>
-  
-    <div id="contenido">
-</div>
-
-    <button onclick = "cerrar()" >Cerrar sesión</button>
-    `;
-  }
-}
 
 //funcion cerrar de firebase le di funcionalidad y un console para comprobar lo que esta pasando
 function cerrar() {
@@ -166,6 +130,7 @@ whiskyButton.addEventListener('click', function() {
   context.drawImage(player, 0, 0, snapshotCanvas.width,
       snapshotCanvas.height);
   console.log(context.canvas.toDataURL());
+  
 });
 
 navigator.mediaDevices.getUserMedia({
@@ -173,26 +138,7 @@ navigator.mediaDevices.getUserMedia({
   })
   .then(handleSuccess);
 
-  //notificacion
-  var messaging = firebase.messaging();
+  function foto() {
+    return "context.canvas.toDataURL()";
 
-messaging.requestPermission()
-  .then(function() {
-    console.log('Se han aceptado las notificaciones');
-    return messaging.getToken();
-  })
-  .then(function(token) {
-    if(token) {
-      guardarToken(token)
-    } else {
-      anulaToken();
-    }
-  
-  })
-  .catch(function(error) {
-    mensajeFeedback(error);
-    console.log('No se ha recibido permiso / token: ', error);
-  });
-
-
-  
+}
