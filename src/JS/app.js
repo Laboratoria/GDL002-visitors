@@ -82,10 +82,33 @@ function aparece(user) {
   var user = user;
   var contenido = document.getElementById("contenido");
   if (user.emailVerified) {
-      contenido.innerHTML = `<script src = "../pantallas/administracion.html"> </script>
+      contenido.innerHTML = `
     <p>Bienvenidx ${user.email}</p>
     <h1>Estos son los visitantes del Día </h1>
     
+  
+
+    <div id="contenido">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col"> Nombre </th>
+                    <th scope="col"> Apellido </th>
+                    <th scope="col"> Fecha </th>
+                    <th scope="col"> Email </th>
+                    <th scope="col"> Motivo de visita </th>
+                    <th scope="col"> Tiempo estimado de visita</th>
+                    <th scope="col">Eliminar</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="tabla">
+    </div>
+    </div>
+  
+    <div id="contenido">
+</div>
 
     <button onclick = "cerrar()" >Cerrar sesión</button>
     `;
@@ -149,3 +172,27 @@ navigator.mediaDevices.getUserMedia({
       video: true
   })
   .then(handleSuccess);
+
+  //notificacion
+  var messaging = firebase.messaging();
+
+messaging.requestPermission()
+  .then(function() {
+    console.log('Se han aceptado las notificaciones');
+    return messaging.getToken();
+  })
+  .then(function(token) {
+    if(token) {
+      guardarToken(token)
+    } else {
+      anulaToken();
+    }
+  
+  })
+  .catch(function(error) {
+    mensajeFeedback(error);
+    console.log('No se ha recibido permiso / token: ', error);
+  });
+
+
+  

@@ -18,7 +18,6 @@
                 <div class="topnav" id="myTopnav">
                     <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
                     <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                    <li><a href="../pantallas/usuariocw.html">Usuario CW</a></li>
                     <li><a href="../pantallas/administracion.html">Administración</a></li>
                     <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
             </ul>
@@ -46,7 +45,7 @@
         </form>
 
         <p id="demo"></p>
-        <button onclick="guardar()" title="Almacenar en Database"> Registrarme </button>
+        <button id= "boton" onclick="guardar()" title="Almacenar en Database"> Registrarme </button>
     </section>
 
     <section id="foto">
@@ -56,6 +55,7 @@
 
     </section>
     <button id="whisky" title="Foto de registro"> Tomar Foto 😬 </button>
+
 
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>

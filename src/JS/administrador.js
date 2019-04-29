@@ -44,7 +44,7 @@ function guardar() {
 //pasa los datos de mi coleccion visitantes y los acomoda en cada espacio declarado en mis doc
 var tabla = document.getElementById("tabla");
 db.collection("visitantes").onSnapshot((querySnapshot) => {
-    tabla.innerHTML = "";
+    tabla.innerHTML = '';
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
         console.log(doc.data())
@@ -58,7 +58,11 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
         <td> ${doc.data().mySelect}</td>
         <td> ${doc.data().tiempo}</td>
         
+
+
+        
        <td><button onclick="eliminar('${doc.id}')" title="Boton Eliminar"> ❌</button></td>
+  
       </tr>
       `;
     });
@@ -77,6 +81,9 @@ function eliminar(id) {
     });
 
 }
+
+
+
 //funcion para seleccionar el motivo de la visita declarando la variable x como laboratoria
 //declarando la variable i como plaza S, regresando la opcion en demo
 function myFunction() {
@@ -116,3 +123,5 @@ return dateFns.format(timestamp, 'MM/DD/YYYY')
 }
 var unixNow = (new Date()) ;
 document.write(convertTimestamp(unixNow));
+
+
