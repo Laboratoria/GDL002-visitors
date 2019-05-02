@@ -12,17 +12,21 @@
 </head>
 
 <body>
-    <header id="header">
-        <nav>
-            <ul>
-                <div class="topnav" id="myTopnav">
-                    <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
-                    <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                    <li><a href="../pantallas/administracion.html">Administración</a></li>
-                    <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
-            </ul>
-        </nav>
-    </header>
+        <header id="header">
+                <nav>
+                    <ul>
+                        <div class="topnav" id="myTopnav">
+                            <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
+                            <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
+                            <li><a href="../pantallas/indexcoworker.html" placeholder="Usuarios de Coworking">Socios</a></li>
+                            <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+                    </ul>
+                </nav>
+        
+             
+                   
+                </header>
+            
 
     <!--Campos para agregar informaciòn de cada nuevo visitante y se agregue a la colecciòn-->
     <h2> Bienvenidx a Gurú Keys</h2>
@@ -34,18 +38,18 @@
         <input type="date" id="fecha">
         <input type="text" id="tiempo" placeholder="Tiempo estimado de visita">
       
-        <canvas id="snapshot"></canvas>
+          <canvas id="snapshot"></canvas>
 
         <form>
             <select id="mySelect" onchange="myFunction()">
                 <option> ¿A quien visitas? </option>
-                <option>Laboratoria</option>
+                <option>Alex Aviles</option>
                 <option>Plaza Sania</option>
             </select>
         </form>
 
         <p id="demo"></p>
-        <button id= "boton" onclick="guardar()" title="Almacenar en Database"> Registrarme </button>
+        <button id= "boton" onclick="guardar()" id="mostrar" title="Almacenar en Database"> Registrarme </button>
     </section>
 
     <section id="foto">
@@ -54,6 +58,7 @@
 
 
     </section>
+  
     <button id="whisky" title="Foto de registro"> Tomar Foto 😬 </button>
 
 

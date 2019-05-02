@@ -129,16 +129,25 @@ whiskyButton.addEventListener('click', function() {
   //Aparece el cuadro de video al lienzo.
   context.drawImage(player, 0, 0, snapshotCanvas.width,
       snapshotCanvas.height);
+ 
+  snapshot.src = snapshotCanvas.toDataURL("image/png");
+  player.style.display = 'none';
+  whiskyButton.style.display = 'none'; 
   console.log(context.canvas.toDataURL());
-  
 });
 
 navigator.mediaDevices.getUserMedia({
       video: true
   })
   .then(handleSuccess);
-
-  function foto() {
-    return "context.canvas.toDataURL()";
-
+function b64 () {
+ // Base64url formatted string
+var message = '5b6p5Y-344GX44G-44GX44Gf77yB44GK44KB44Gn44Go44GG77yB';
+ref.putString(message, 'base64url').then(function(snapshot) {
+  console.log('Uploaded a base64url string!');
+});
+// Create file metadata including the content type
+var metadata = {
+  contentType: 'image/png',
+};
 }

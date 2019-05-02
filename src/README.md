@@ -28,4 +28,12 @@ Situando en una app facil de usar e intuitiva.
 
 3 entrevistas
 
+##Prototipo de Alta fidelidad
+![Pantalla de inicio](../src/prototipos/index.png)
+![Pantalla de inicio](../src/prototipos/al dar click en registro.png)
+![Pantalla de inicio](../src/prototipos/ficha de registro.png)
+![Pantalla de inicio](../src/prototipos/ficha de registro llena.png)
+![Pantalla de inicio](../src/prototipos/registro de administrador.png)
+![Pantalla de inicio](../src/prototipos/toma de foto.png)
+![Pantalla de inicio](../src/prototipos/tabla limpia.png)
 

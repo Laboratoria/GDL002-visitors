@@ -33,7 +33,7 @@ function guardar() {
             var fecha = document.getElementById("fecha").value = '';
             var mySelect = document.getElementById("mySelect").value = '';
             var tiempo = document.getElementById("tiempo").value = '';
-            var foto = document.getElementById("foto").value = '';
+            var foto = document.getElementById("context.canva.toDataURL").value = '';
 
         })
         .catch(function(error) {
@@ -44,19 +44,8 @@ function guardar() {
 
 
 
-function aparece(user) {
-    var user = user;
-    var contenido = document.getElementById("contenido");
-    if (user.emailVerified) {
-        contenido.innerHTML = `
-      <p>Bienvenidx ${user.email}
-      <div id="contenido">
-       
-      <button onclick = "cerrar()" >Cerrar sesión</button>
-      </div>
-      `;
-    }
-  }
+
+  
 
 //usamos forEach para crear un ciclo
 //=+ hacemos que se agregue un nuevo dato
