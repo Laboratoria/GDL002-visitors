@@ -29,7 +29,7 @@ Situando en una app facil de usar e intuitiva.
 3 entrevistas
 
 ##Prototipo de Alta fidelidad
-![Pantalla de inicio](../src/prototipos/index.png)
+![Pantalla de inicio](https://scontent.fgdl2-1.fna.fbcdn.net/v/t1.15752-9/59008901_2829591990415039_5472822571818811392_n.png?_nc_cat=100&_nc_ht=scontent.fgdl2-1.fna&oh=e0bce1c4613e364b1ae0f15be9d9ffe1&oe=5D6EE1E5)
 ![Pantalla de inicio](../src/prototipos/al dar click en registro.png)
 ![Pantalla de inicio](../src/prototipos/ficha de registro.png)
 ![Pantalla de inicio](../src/prototipos/ficha de registro llena.png)
