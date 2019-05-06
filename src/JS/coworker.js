@@ -21,17 +21,17 @@ function iniciarenco() {
 
 
     db.collection("coworkers").add({
-            email: coemail,
-            name: conombre,
-            hour: firebase.firestore.FieldValue.serverTimestamp(), //pinta la hora de entrada del usuario
-            empresa: empresa
+            email: coemail, //Direccion de correo electronico del usuario de cw
+            name: conombre, //Nombre de usuario
+            HoraEntrada: firebase.firestore.FieldValue.serverTimestamp(), //pinta la hora de entrada del usuario
+            empresa: empresa //Registra el lugar al que se dirige
         })
         .then(function(docRef) {
             console.log("ID: ", docRef.id);
-            var conombre = document.getElementById("conombre").value = '';
+            var conombre = document.getElementById("conombre").value = ''; //variable para guardar el nombre del usuario
             var empresa = document.getElementById("empresa").value = ''; // variable para guardar el motivo de visita
-            var coemail = document.getElementById("coemail").value = '';
-            var iniciarenco = document.getElementById("inciarenco");
+            var coemail = document.getElementById("coemail").value = ''; //variable para guardar el email
+            var iniciarenco = document.getElementById("inciarenco"); //boton de inicio
 
         })
         .catch(function(error) {
@@ -43,7 +43,7 @@ function iniciarenco() {
 
 
 
-function aparece(user) {
+function aparece(user) { //funcion para que me muestre los datos en el momento en que el usuario inicia
     var user = user;
     var contenido = document.getElementById("contenido");
     if (user.emailVerified) {
@@ -62,7 +62,7 @@ function aparece(user) {
 
 
 
-function convertTimestamp(timestamp) {
+function convertTimestamp(timestamp) { //funcion para convertir la hora y fecha
     return dateFns.format(timestamp, 'MM/DD/YYYY')
 
 }
@@ -71,7 +71,7 @@ document.write(convertTimestamp(unixNow));
 
 
 
-function functEmpresa() {
+function functEmpresa() { //funcion para elegir a donde me dirijo
     var x = document.getElementById("empresa");
     var i = x.selectedIndex;
     document.getElementById("demo").innerHTML = x.options[i].text;
@@ -105,7 +105,7 @@ function cerrarco() {
         })
 }
 
-function verificarco() {
+function verificarco() { //envia el correo de verificacion a los usuarios
     var user = firebase.auth().currentUser;
 
     user.sendEmailVerification().then(function() {
@@ -118,7 +118,7 @@ function verificarco() {
 }
 
 
-function observadorco() {
+function observadorco() { //observador para imprimir en consola el proceso
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             console.log("existe usuario activo")

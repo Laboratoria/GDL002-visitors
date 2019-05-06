@@ -132,11 +132,11 @@ whiskyButton.addEventListener('click', function() {
 
   const imageData = context.getImageData(0, 0, snapshotCanvas.width, snapshotCanvas.height);
   console.log(imageData);
-  const converToURL = snapshotCanvas.toDataURL('image/png');
-  snapshot.src = snapshotCanvas.toDataURL("image/png");
+
+  const converToURL = snapshotCanvas.toDataURL("image/png");
   player.style.display = 'none';
   whiskyButton.style.display = 'none';
-  document.getElementById("hiddenPicture").innerHTML = converToURL;
+ 
 
 
 });
