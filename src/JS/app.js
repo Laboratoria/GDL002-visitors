@@ -129,25 +129,49 @@ whiskyButton.addEventListener('click', function() {
   //Aparece el cuadro de video al lienzo.
   context.drawImage(player, 0, 0, snapshotCanvas.width,
       snapshotCanvas.height);
- 
+
+  const imageData = context.getImageData(0, 0, snapshotCanvas.width, snapshotCanvas.height);
+  console.log(imageData);
+  const converToURL = snapshotCanvas.toDataURL('image/png');
   snapshot.src = snapshotCanvas.toDataURL("image/png");
   player.style.display = 'none';
-  whiskyButton.style.display = 'none'; 
-  console.log(context.canvas.toDataURL());
-});
+  whiskyButton.style.display = 'none';
+  document.getElementById("hiddenPicture").innerHTML = converToURL;
 
+
+});
 navigator.mediaDevices.getUserMedia({
       video: true
   })
   .then(handleSuccess);
-function b64 () {
- // Base64url formatted string
-var message = '5b6p5Y-344GX44G-44GX44Gf77yB44GK44KB44Gn44Go44GG77yB';
-ref.putString(message, 'base64url').then(function(snapshot) {
-  console.log('Uploaded a base64url string!');
-});
-// Create file metadata including the content type
-var metadata = {
-  contentType: 'image/png',
-};
-}
+
+
+
+// //jan
+// document.getElementById("hiddenPicture").style.display= "none";
+
+// var player = document.getElementById('player');
+// var snapshotCanvas = document.getElementById('snapshot');
+// var captureButton = document.getElementById('capture');
+
+// var handleSuccess = function(stream) {
+// // Attach the video stream to the video element and autoplay.
+// player.srcObject = stream;
+// };
+
+// captureButton.addEventListener('click', function() {
+// var context = snapshotCanvas.getContext('2d');
+// // Draw the video frame to the canvas.
+// const showImage = context.drawImage(player, 0, 0, snapshotCanvas.width,
+//     snapshotCanvas.height);
+
+// const imageData = context.getImageData(0, 0, snapshotCanvas.width,snapshotCanvas.height);
+// console.log(imageData);
+// const converToURL = snapshotCanvas.toDataURL('image/png');
+// document.getElementById("hiddenPicture").innerHTML=converToURL;//si se quita .innerHTML genera un arreglo
+
+// });
+
+
+// navigator.mediaDevices.getUserMedia({video: true})
+//   .then(handleSuccess);

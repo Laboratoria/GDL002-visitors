@@ -12,7 +12,7 @@ function guardar() {
     var mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
     var tiempo = document.getElementById("tiempo").value;
     var foto = document.getElementById("foto()");
-   
+
 
     // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
     db.collection("visitantes").add({
@@ -44,8 +44,6 @@ function guardar() {
 
 
 
-
-  
 
 //usamos forEach para crear un ciclo
 //=+ hacemos que se agregue un nuevo dato
@@ -115,4 +113,3 @@ return dateFns.format(timestamp, 'MM/DD/YYYY')
 var unixNow = (new Date()) ;
 document.write(convertTimestamp(unixNow));
 */
-
