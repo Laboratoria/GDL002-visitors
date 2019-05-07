@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../style.css" />
     <title>Document</title>
 </head>
@@ -16,27 +14,28 @@
 <body>
     <header id="header">
         <nav>
-            <ul>
-                <div class="topnav" id="myTopnav">
+            <ul class="topnav" id="myTopnav">
+               
                     <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
                     <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                    <li><a href="../pantallas/indexcoworker.html" placeholder="Usuarios de Coworking">Socios</a></li>
-                    <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+                    <li><a href="../pantallas/indexcoworker.html">Socios</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+                    
             </ul>
         </nav>
     </header>
 
     <h1>Bienvenido Usuario </h1>
-
-
     <section id="contenido">
 
 
     </section>
+
+   
     <h4>Iniciar como usuario verificado</h4>
     <input type="email" id="emailco" placeholder="Ingresa tu email 📧 " autofocus="autofocus" />
     <input type="password" id="contraco" placeholder="Ingresa tu contraseña 🔒 " required="required" />
-    <button onclick="ingresocowor()" id="mostrar" placeholder="Iniciar sesión como usuario verificado">Iniciar sesión</button>
+    <button onclick="ingresocowor()" id="mostrar">Iniciar sesión</button>
 
     <p>¿Eres nuevo?</p>
 
@@ -49,7 +48,7 @@
             </select>
         </form>
 
-        <input type="text" id="conombre" placeholder="Tu nombre va acá" autofocus="autofocus">
+        <input type="text" id="conombre" placeholder="Tu nombre va acá">
         <input type="text" id="coemail" placeholder="ejemplo@blabla.com" required="required">
         <input type="password" id="cocontraseña" placeholder="Ingresa tu contraseña 🔒 " required="required" />
         <button onclick="iniciarenco()" title="¿Aún no tienes una cuenta?">Registrar Usuario</button><br>

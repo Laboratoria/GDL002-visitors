@@ -2,13 +2,13 @@
 <html lang="es">
 
 <head>
-    <!---Firestore--->
+   
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" />
     <title>Document</title>
 
@@ -17,17 +17,15 @@
 <body>
     <header id="header">
         <nav>
-            <ul>
-                <div class="topnav" id="myTopnav">
+            <ul class="topnav" id="myTopnav">
+               
                     <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
                     <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                    <li><a href="../pantallas/indexcoworker.html" placeholder="Usuarios de Coworking">Socios</a></li>
-                    <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+                    <li><a href="../pantallas/indexcoworker.html">Socios</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+                    
             </ul>
         </nav>
-
-
-
     </header>
 
     <h1>Bienvenido Gurú</h1>
@@ -60,7 +58,7 @@
     <h3>Verificador de usuarios</h3>
     <input type="email" id="email" placeholder="Ingresa tu email 📧 " autofocus="autofocus" />
     <input type="password" id="contraseña" placeholder="Ingresa tu contraseña 🔒 " required="required" />
-    <button onclick="ingreso()" placeholder="Iniciar sesión como Administrador">Iniciar sesión</button>
+    <button onclick="ingreso()">Iniciar sesión</button>
     <br>
     <h3>¿Aún no tienes cuenta?</h3>
     <button onclick="registrar()" title="¿Aún no tienes una cuenta?">Unirme</button><br>

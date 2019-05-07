@@ -1,30 +1,28 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 
 <head>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" />
-
+    <title>Document</title>
 
 </head>
 
 <body>
     <header id="header">
         <nav>
-            <ul>
-                <div class="topnav" id="myTopnav">
+            <ul class="topnav" id="myTopnav">
+               
                     <li><a class="active" href="../pantallas/index.html"> 🏠 </a></li>
                     <li><a href="../pantallas/ingreso.html">Registro de entrada</a></li>
-                    <li><a href="../pantallas/indexcoworker.html" placeholder="Usuarios de Coworking">Socios</a></li>
-                    <a href="javascript:void(0);" class="icon" onclick="mymenu()"></a>
+                    <li><a href="../pantallas/indexcoworker.html">Socios</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+                    
             </ul>
         </nav>
-
-
-
     </header>
 
 
@@ -49,18 +47,18 @@
         </form>
 
         <p id="demo"></p>
-        <button id="boton" onclick="guardar()" id="mostrar" title="Almacenar en Database"> Registrarme </button>
+        <button onclick="guardar()" id="mostrar" title="Almacenar en Database"> Registrarme </button>
     </section>
 
-    <section id="foto">
+   
 
         <video id="player" controls autoplay></video>
 
 
-    </section>
-
+   
+   
     <button id="whisky" title="Foto de registro"> Tomar Foto 😬 </button>
-
+<button id="subir">Subir</button>
 
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>

@@ -146,15 +146,28 @@ navigator.mediaDevices.getUserMedia({
   .then(handleSuccess);
 
 
+// function subir(){  // Get a reference to the storage service, which is used to create references in your storage bucket
 
 
-// const imageData = context.getImageData(0, 0, snapshotCanvas.width,snapshotCanvas.height);
-// console.log(imageData);
-// const converToURL = snapshotCanvas.toDataURL('image/png');
-// document.getElementById("hiddenPicture").innerHTML=converToURL;//si se quita .innerHTML genera un arreglo
+// //subir un archivo a Cloud Storage (configurcion de Firebase)
+// // Create a root reference
 
+// // Uint8Array
+// var bytes = new Uint8Array([0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21]);
+// ref.put(bytes).then(function(snapshot) {
+//   console.log('Uploaded an array!');
 // });
-
-
-// navigator.mediaDevices.getUserMedia({video: true})
-//   .then(handleSuccess);
+  
+  // const ref = firebase.storage().ref();
+  // const file = $('#whisky').get(0).files[0];   const name = (+new Date()) + '-' + file.name;
+  // const metadata = {
+  //   contentType: file.type
+  // };
+  // const task = ref.child(name).put(file, metadata);
+  // task
+  //   .then(snapshot => snapshot.ref.getDownloadURL())
+  //   .then((url) => {
+  //     console.log(url);
+  //     document.querySelector('#someImageTagID').src = url;
+  //   })
+  //   .catch(console.error);

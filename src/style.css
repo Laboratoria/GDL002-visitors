@@ -264,7 +264,7 @@ video {
 
 #whisky {
     margin-left: 47em;
-    margin-top: 9em;
+    margin-top: -5em;
     width: 25em;
     height: 3.5em;
     display: block;
@@ -314,7 +314,7 @@ canvas {
     margin: 0.5em 4em;
     display: flex;
     align-items: center;
-    font-size: 16
+    font-size: 1em;
 }
 
 .time__msg span {
